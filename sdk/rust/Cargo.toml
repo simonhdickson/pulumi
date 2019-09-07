@@ -1,0 +1,17 @@
+[package]
+name = "rust"
+version = "0.1.0"
+authors = ["Simon Dickson <simonhdickson@users.noreply.github.com>"]
+edition = "2018"
+
+[dependencies]
+bytes = "0.4"
+prost = "0.5"
+prost-types = "0.5"
+tower-hyper = "0.1"
+tower-grpc = { git = "https://github.com/tower-rs/tower-grpc", features = ["tower-hyper"] }
+tower-service = "0.2"
+tower-util = "0.1"
+
+[build-dependencies]
+tower-grpc-build = { git = "https://github.com/tower-rs/tower-grpc/tower-grpc-build", features = ["tower-hyper"] }
